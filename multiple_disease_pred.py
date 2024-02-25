@@ -88,6 +88,12 @@ if (selected == 'Heart Disease Prediction'):
     # page title 
     st.title('Heart Disease Prediction Using ML')
     
+
+# Display default example data as a reference for users
+st.subheader("Example Input Data:")
+st.write("Age: 52, Sex: 1, CP: 0, Trestbps: 125, Chol: 212, Fbs: 0, Restecg: 1, Thalach: 168, Exang: 0, Oldpeak: 1, Slope: 2, CA: 2, Thal: 3")
+
+
     # getting the input data from the user
     # colunms for input fields
     col1, col2, col3 = st.columns(3)
