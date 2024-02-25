@@ -123,7 +123,7 @@ if (selected == 'Heart Disease Prediction'):
             heart_diagnosis = 'The Person does not have Heart Disease'
     
     st.success(heart_diagnosis)
-    ---------------------------------------------------------------------------------------------------------------------------------------------    
+    #---------------------------------------------------------------------------------------------------------------------------------------------    
     # Diabetes Prediction Page
 
 if (selected == 'Diabetes Prediction'):
