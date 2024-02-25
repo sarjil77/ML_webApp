@@ -38,6 +38,11 @@ if (selected == 'Diabetes Prediction'):
     # page title 
     st.title('Diabetes Prediction Using ML')
     
+    #example of input data 
+    st.subheader("Example of Diabetes Input Data:")
+    st.write("For person having Diabetes")
+    st.write("Pregnancies: 6, Glucose: 148, BloodPressure: 72, SkinThickness: 35, Insulin: 0, BMI: 33.6, DiabetesPedigreeFunction: 0.627, Age: 50")
+    
     # getting the input data from the user
     # colunms for input fields
     col1, col2, col3 = st.columns(3)
