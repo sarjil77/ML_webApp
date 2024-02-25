@@ -87,7 +87,10 @@ if (selected == 'Diabetes Prediction'):
 if (selected == 'Heart Disease Prediction'):
     # Display default example data as a reference for users
     st.subheader("Example Input Data:")
+    st.write("For person does not have Heart Disease")
     st.write("Age: 52, Sex: 1, CP: 0, Trestbps: 125, Chol: 212, Fbs: 0, Restecg: 1, Thalach: 168, Exang: 0, Oldpeak: 1, Slope: 2, CA: 2, Thal: 3")
+    st.write("For person having Heart Disease")
+    st.write("Age: 71, Sex: 0, CP: 0, Trestbps: 112, Chol: 149, Fbs: 0, Restecg: 1, Thalach: 125, Exang: 0, Oldpeak: 1.6, Slope: 1, CA: 0, Thal: 2")
     # page title 
     st.title('Heart Disease Prediction Using ML')
 
