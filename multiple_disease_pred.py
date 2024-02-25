@@ -12,11 +12,11 @@ from streamlit_option_menu import option_menu
 # loading the saved models
 # diabetes model
 
-diabetes_model = pickle.load(open('C:/Machine Learning/Deploying ML models/multiple disease pred/trained_diabetes_pred.sav','rb'))
+diabetes_model = pickle.load(open('trained_diabetes_pred.sav','rb'))
 
 # heart model
 
-heart_model = pickle.load(open('C:/Machine Learning/Deploying ML models/multiple disease pred/trained_heart_disease_.sav','rb'))
+heart_model = pickle.load(open('trained_heart_disease_.sav','rb'))
 
 
 # creating the sidebar for navigation
