@@ -31,63 +31,7 @@ with st.sidebar:
                            
                             default_index = 0)
     
-# Diabetes Prediction Page
-
-if (selected == 'Diabetes Prediction'):
-    
-    # page title 
-    st.title('Diabetes Prediction Using ML')
-    
-    #example of input data 
-    st.subheader("Example of Diabetes Input Data:")
-    st.write("For person having Diabetes")
-    st.write("Pregnancies: 6, Glucose: 148, BloodPressure: 72, SkinThickness: 35, Insulin: 0, BMI: 33.6, DiabetesPedigreeFunction: 0.627, Age: 50")
-    
-    # getting the input data from the user
-    # colunms for input fields
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        Pregnancies = st.text_input('Number of pregnancies')
-    
-    with col2:
-        Glucose = st.text_input('Glucose level')
-    
-    with col3:
-        BloodPressure = st.text_input('Blood Pressure value')
-    
-    with col1:
-        SkinThickness = st.text_input('Skin Thickness value')
-        
-    with col2:
-        Insulin = st.text_input('Insulin level')
-    
-    with col3:
-        BMI = st.text_input('BMI')
-    
-    with col1:
-        DiabetesPedigreeFunction = st.text_input('DiabetesPedigreeFunction')
-    
-    with col2:
-        Age = st.text_input('Age of the person')
-    
-    
-    # code for prediction
-    diab_diagnosis = ''
-    
-    # creating a button for prediction
-    if st.button('Diabetes Test Result'):
-        diab_diagnosis = diabetes_model.predict([[Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age]])
-        
-        if (diab_diagnosis[0] == 1):
-            diab_diagnosis = 'The person have Diabetes'
-            
-        else:
-            diab_diagnosis = 'The person does not have Diabetes'
-    
-    st.success(diab_diagnosis)
-    
-    
+   
 # Heart Disease page
 if (selected == 'Heart Disease Prediction'):
     # Display default example data as a reference for users
@@ -179,9 +123,62 @@ if (selected == 'Heart Disease Prediction'):
             heart_diagnosis = 'The Person does not have Heart Disease'
     
     st.success(heart_diagnosis)
+    ---------------------------------------------------------------------------------------------------------------------------------------------    
+    # Diabetes Prediction Page
+
+if (selected == 'Diabetes Prediction'):
+    
+    # page title 
+    st.title('Diabetes Prediction Using ML')
+    
+    #example of input data 
+    st.subheader("Example of Diabetes Input Data:")
+    st.write("For person having Diabetes")
+    st.write("Pregnancies: 6, Glucose: 148, BloodPressure: 72, SkinThickness: 35, Insulin: 0, BMI: 33.6, DiabetesPedigreeFunction: 0.627, Age: 50")
+    
+    # getting the input data from the user
+    # colunms for input fields
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        Pregnancies = st.text_input('Number of pregnancies')
+    
+    with col2:
+        Glucose = st.text_input('Glucose level')
+    
+    with col3:
+        BloodPressure = st.text_input('Blood Pressure value')
+    
+    with col1:
+        SkinThickness = st.text_input('Skin Thickness value')
+        
+    with col2:
+        Insulin = st.text_input('Insulin level')
+    
+    with col3:
+        BMI = st.text_input('BMI')
+    
+    with col1:
+        DiabetesPedigreeFunction = st.text_input('DiabetesPedigreeFunction')
+    
+    with col2:
+        Age = st.text_input('Age of the person')
     
     
+    # code for prediction
+    diab_diagnosis = ''
     
+    # creating a button for prediction
+    if st.button('Diabetes Test Result'):
+        diab_diagnosis = diabetes_model.predict([[Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age]])
+        
+        if (diab_diagnosis[0] == 1):
+            diab_diagnosis = 'The person have Diabetes'
+            
+        else:
+            diab_diagnosis = 'The person does not have Diabetes'
+    
+    st.success(diab_diagnosis)
     
     
     
