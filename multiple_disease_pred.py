@@ -138,24 +138,28 @@ if (selected == 'Heart Disease Prediction'):
     heart_diagnosis = ''
     
     # button for prediction
-    
     # Convert input values to appropriate data types
-    age = float(age)
-    sex = float(sex)
-    cp = float(cp)
-    trestbps = float(trestbps)
-    chol = float(chol)
-    fbs = float(fbs)
-    restecg = float(restecg)
-    thalach = float(thalach)
-    exang = float(exang)
-    oldpeak = float(oldpeak)
-    slope = float(slope)
-    ca = float(ca)
-    thal = float(thal)
+    if age.strip() and sex.strip() and cp.strip() and trestbps.strip() and chol.strip() and fbs.strip() and restecg.strip() and thalach.strip() and exang.strip() and oldpeak.strip() and slope.strip() and ca.strip() and thal.strip():
+        age = float(age)
+        sex = float(sex)
+        cp = float(cp)
+        trestbps = float(trestbps)
+        chol = float(chol)
+        fbs = float(fbs)
+        restecg = float(restecg)
+        thalach = float(thalach)
+        exang = float(exang)
+        oldpeak = float(oldpeak)
+        slope = float(slope)
+        ca = float(ca)
+        thal = float(thal)
+    else:
+        st.error("Please fill in all the input fields.")
 
+# Now pass the converted values to the model for prediction
     if st.button('Heart Disease result'):
         heart_pred = heart_model.predict([[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]])
+   
         
         if (heart_pred[0] == 1):
             
